@@ -1,0 +1,262 @@
+[
+    {
+      "Post": "Chair",
+      "Name": "Pratyush Sevda",
+      "EnrollmentNo": "E23CSEU1889",
+      "Club": "ACM"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Dheemant Mishra",
+      "EnrollmentNo": "E23ECEU0007",
+      "Club": "ACM"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Parth Shukla",
+      "EnrollmentNo": "E23CSEU0023",
+      "Club": "IEEE"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Vrinda Gupta",
+      "EnrollmentNo": "E23CSEU0461",
+      "Club": "IEEE"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Nandini Sharma",
+      "EnrollmentNo": "E23CSEU0747",
+      "Club": "WIE"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Disha Gupta",
+      "EnrollmentNo": "E23CSEU2039",
+      "Club": "WIE"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Aryan Diggal",
+      "EnrollmentNo": "E23CSEU0125",
+      "Club": "CSI"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Shubham Tandon",
+      "EnrollmentNo": "E23CSEU1730",
+      "Club": "CSI"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Manan Malik",
+      "EnrollmentNo": "E22CSEU1603",
+      "Club": "Codechef"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Ishvani Verma",
+      "EnrollmentNo": "e23cseu0108",
+      "Club": "Codechef"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Charvi Singh",
+      "EnrollmentNo": "E23CSEU0843",
+      "Club": "GeeksforGeeks"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Kisha Agarwal",
+      "EnrollmentNo": "E23CSEU0409",
+      "Club": "GeeksforGeeks"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Nipurn Goyal",
+      "EnrollmentNo": "E23CSEU1135",
+      "Club": "Alan Turing Club"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Sneha Choudhary",
+      "EnrollmentNo": "E23CSEU1069",
+      "Club": "Alan Turing Club"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Samaksh Tyagi",
+      "EnrollmentNo": "E23CSEU1303",
+      "Club": "AIS (AI Club)"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Aviral Jain",
+      "EnrollmentNo": "E22CSEU0841",
+      "Club": "AIS (AI Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Tushar Gakhil",
+      "EnrollmentNo": "E22CSEU0611",
+      "Club": "IBF (Blockchain Club)"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Vatsal Tibrewal",
+      "EnrollmentNo": "E22CSEU1054",
+      "Club": "IBF (Blockchain Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Dhruv Maheshwari",
+      "EnrollmentNo": "E23BCAU0166",
+      "Club": "Ciphers (Cyber Sec Club)"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Peddinti Lalithaditya",
+      "EnrollmentNo": "E23CSEU0400",
+      "Club": "Ciphers (Cyber Sec Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Shaurya Singh Pundir",
+      "EnrollmentNo": "E23CSEU1062",
+      "Club": "DSS (Data Science Club)"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Kartik Purohit",
+      "EnrollmentNo": "E23CSEU2038",
+      "Club": "DSS (Data Science Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Sajal Jain",
+      "EnrollmentNo": "E22CSEU0781",
+      "Club": "DroneSoc (Drone Club)"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Yash Ozha",
+      "EnrollmentNo": "E22CSEU0854",
+      "Club": "DroneSoc (Drone Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Aman Gangwar",
+      "EnrollmentNo": "E23CSEU2073",
+      "Club": "Full Stack Club"
+    },
+    {
+      "Post": "Vice Chair",
+      "Name": "Avika Singh",
+      "EnrollmentNo": "E23CSEU1473",
+      "Club": "Full Stack Club"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Prabal Sharma",
+      "EnrollmentNo": "E23CSEU1775",
+      "Club": "Solace (Gaming Club)"
+    },
+    {
+      "Post": "Chair",
+      "Name": "Riddhi Chaplot",
+      "EnrollmentNo": "E23CSEU0425",
+      "Club": "RPA Club"
+    },
+    {
+        "Chair": "Samaksh Tyagi",
+        "ChairID": "E23CSEU1303",
+        "ViceChair": "Aviral Jain",
+        "ViceChairID": "E22CSEU0841",
+        "Club": "AIS (AI Club)"
+      },
+      {
+        "Chair": "Tushar Gakhil",
+        "ChairID": "E22CSEU0611",
+        "ViceChair": "Vatsal Tibrewal",
+        "ViceChairID": "E22CSEU1054",
+        "Club": "IBF (Blockchain Club)"
+      },
+      {
+        "Chair": "Dhruv Maheshwari",
+        "ChairID": "E23BCAU0166",
+        "ViceChair": "Peddinti Lalithaditya",
+        "ViceChairID": "E23CSEU0400",
+        "Club": "Ciphers (Cyber Sec Club)"
+      },
+      {
+        "Chair": "Shaurya Singh Pundir",
+        "ChairID": "E23CSEU1062",
+        "ViceChair": "Kartik Purohit",
+        "ViceChairID": "E23CSEU2038",
+        "Club": "DSS (Data Science Club)"
+      },
+      {
+        "Chair": "Sajal Jain",
+        "ChairID": "E22CSEU0781",
+        "ViceChair": "Yash Ozha",
+        "ViceChairID": "E22CSEU0854",
+        "Club": "DroneSoc (Drone Club)"
+      },
+      {
+        "Chair": "Aman Gangwar",
+        "ChairID": "E23CSEU2073",
+        "ViceChair": "Avika Singh",
+        "ViceChairID": "E23CSEU1473",
+        "Club": "Full Stack Club"
+      },
+      {
+        "Chair": "Prabal Sharma",
+        "ChairID": "E23CSEU1775",
+        "ViceChair": null,
+        "ViceChairID": null,
+        "Club": "Solace (Gaming Club)"
+      },
+      {
+        "Chair": "Riddhi Chaplot",
+        "ChairID": "E23CSEU0425",
+        "ViceChair": null,
+        "ViceChairID": null,
+        "Club": "RPA Club"
+      },
+      {
+        "Chair": "SAYANTI CHATTERJEE",
+        "ChairID": "E23CSEU0552",
+        "ViceChair": null,
+        "ViceChairID": null,
+        "Club": "QCC (Quantum Computing Club)"
+      },
+      {
+        "Chair": "Dhairya Gupta",
+        "ChairID": "E23CSEU1105",
+        "ViceChair": null,
+        "ViceChairID": null,
+        "Club": "IOT and Robotics"
+      },
+      {
+        "Chair": "Rakshit Kapoor",
+        "ChairID": "E22CSEU1262",
+        "ViceChair": "Madhav Gupta",
+        "ViceChairID": "E22CSEU0827",
+        "Club": "Mobilion (Mobile Tech Club)"
+      },
+      {
+        "Chair": "Dhruv Kaushik",
+        "ChairID": "E22CSEU1638",
+        "ViceChair": "Manasvi Priya",
+        "ViceChairID": "E22CSEU1168",
+        "Club": "DevOps Club"
+      },
+      {
+        "Chair": "Naman Sharma",
+        "ChairID": "E23CSEU1424",
+        "ViceChair": "Chaitanya",
+        "ViceChairID": "E23CSEU1417",
+        "Club": "Product Design Tech Club"
+      }
+  ]
+  

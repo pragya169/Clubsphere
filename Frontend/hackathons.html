@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons - ClubSphere</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Page-specific styles */
+      .hero-hackathons {
+        background: linear-gradient(135deg, #673AB7, #512DA8);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-hackathons::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M30 30 L70 30 L70 70 L30 70 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M50 10 L50 90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M10 50 L90 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+        opacity: 0.3;
+      }
+
+      .hackathon-tag {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background: rgba(103, 58, 183, 0.1);
+        color: #673AB7;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .hackathon-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .hackathon-card .card-body {
+        flex: 1;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <a href="index.html" class="navbar-logo">
+          <i class="fas fa-globe-americas"></i> ClubSphere
+        </a>
+
+        <div class="menu-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tech_clubs.html" class="navbar-link">Tech</a>
+          </li>
+          <li class="navbar-item">
+            <a href="cultural_clubs.html" class="navbar-link">Cultural</a>
+          </li>
+          <li class="navbar-item">
+            <a href="sports_teams.html" class="navbar-link">Sports</a>
+          </li>
+          <li class="navbar-item">
+            <a href="events.html" class="navbar-link">Events</a>
+          </li>
+          <li class="navbar-item">
+            <a href="login.html" class="btn btn-sm">Login</a>
+          </li>
+          <li class="navbar-item">
+            <a href="signup.html" class="btn btn-sm">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero hero-hackathons">
+      <div class="container hero-content">
+        <h1 class="hero-title animate-fade-in">Hackathons & Coding Competitions</h1>
+        <p class="hero-subtitle animate-fade-in">
+          Explore upcoming hackathons and showcase your coding skills
+        </p>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search hackathons..."
+            id="hackathonSearch"
+            class="search-input"
+            aria-label="Search hackathons"
+          />
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="section">
+        <!-- <div class="hackathon-stats">
+          <div class="stat-item">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Annual Hackathons</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Participants</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</</div>
+            <div class="stat-label">Projects Created</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Sponsors</div>
+          </div>
+        </div> -->
+
+        <h2 class="section-title">Upcoming Hackathons</h2>
+        
+        <div class="grid">
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">DEVELOPMENT</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="card-title">Hackuccino</h3>
+            <p class="card-body">
+              A 36-hour coding hackathon for developers to build innovative solutions.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">AI & ML</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="card-title">Enigma</h3>
+            <p class="card-body">
+              AI & ML-based hackathon exploring cutting-edge technologies and solutions.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">ANNUAL</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="card-title">TechArena</h3>
+            <p class="card-body">
+              Annual tech fest hackathon with exciting challenges and prizes.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">COMPETITIVE</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="card-title">CodeStorm</h3>
+            <p class="card-body">
+              Competitive coding challenge to test your algorithmic problem-solving skills.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">SOFTWARE</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-coffee"></i>
+            </div>
+            <h3 class="card-title">DevSprint</h3>
+            <p class="card-body">
+              A fast-paced software development hackathon focused on rapid prototyping.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+
+          <div class="card hackathon-card animate-fade-in stagger-item">
+            <span class="hackathon-tag">CYBERSECURITY</span>
+            <div style="font-size: 2rem; color: #673AB7; margin-bottom: 1rem">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="card-title">CyberSec CTF</h3>
+            <p class="card-body">
+              Capture The Flag event for cybersecurity enthusiasts to test their skills.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title">ClubSphere</h3>
+            <p>
+              The ultimate platform for club management and discovery at your
+              university.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="tech_clubs.html">Tech Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="cultural_clubs.html">Cultural Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="sports_teams.html">Sports Teams</a>
+              </li>
+              <li class="footer-link"><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="mailto:info@clubsphere.com">info@clubsphere.com</a>
+              </li>
+              <li class="footer-link">
+                <a href="tel:+91 8423790811">+91 8423790811</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ClubSphere. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navbarMenu.classList.toggle("active");
+      });
+
+      // Search functionality
+      const searchInput = document.getElementById("hackathonSearch");
+      if (searchInput) {
+        searchInput.addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            // Implement search functionality here
+            alert("Search feature coming soon!");
+          }
+        });
+      }
+
+      // Animation on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fade-in");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        document.querySelectorAll(".card").forEach((card) => {
+          observer.observe(card);
+        });
+      });
+    </script>
+</body>
+</html>
+

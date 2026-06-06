@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClubSphere - Manage Your Club Easily</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <a href="index.html" class="navbar-logo">
+          <i class="fas fa-globe-americas"></i> ClubSphere
+        </a>
+
+        <div class="menu-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tech_clubs.html" class="navbar-link">Tech</a>
+          </li>
+          <li class="navbar-item">
+            <a href="cultural_clubs.html" class="navbar-link">Cultural</a>
+          </li>
+          <li class="navbar-item">
+            <a href="sports_teams.html" class="navbar-link">Sports</a>
+          </li>
+          <li class="navbar-item">
+            <a href="events.html" class="navbar-link">Events</a>
+          </li>
+          <li class="navbar-item">
+            <a href="login.html" class="btn btn-sm">Login</a> <!-- Changed class to match Sign Up -->
+          </li>
+          <li class="navbar-item">
+            <a href="signup.html" class="btn btn-sm">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-title animate-fade-in">
+          ClubSphere - Manage Your Club Easily
+        </h1>
+        <p class="hero-subtitle animate-fade-in">
+          Discover, join, and manage clubs all in one place
+        </p>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search clubs..."
+            class="search-input"
+            aria-label="Search clubs"
+          />
+          <!-- <button class="btn add-club">
+            <i class="fas fa-plus"></i> Add Club
+          </button> -->
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="section">
+        <h2 class="section-title">Explore Club Categories</h2>
+        <div class="grid">
+          <div class="card stagger-item animate-fade-in">
+            <i
+              class="fas fa-laptop-code card-icon"
+              style="
+                font-size: 2rem;
+                color: var(--primary);
+                margin-bottom: 1rem;
+              "
+            ></i>
+            <h3 class="card-title">Tech Club</h3>
+            <p class="card-body">
+              Explore the latest in technology and innovation with our
+              tech-focused clubs.
+            </p>
+            <a href="tech_clubs.html" class="btn">View Clubs</a>
+          </div>
+
+          <div class="card stagger-item animate-fade-in">
+            <i
+              class="fas fa-theater-masks card-icon"
+              style="
+                font-size: 2rem;
+                color: var(--secondary);
+                margin-bottom: 1rem;
+              "
+            ></i>
+            <h3 class="card-title">Cultural Club</h3>
+            <p class="card-body">
+              Engage in various cultural and creative activities that celebrate
+              art and diversity.
+            </p>
+            <a href="cultural_clubs.html" class="btn">View Clubs</a>
+          </div>
+
+          <div class="card stagger-item animate-fade-in">
+            <i
+              class="fas fa-running card-icon"
+              style="font-size: 2rem; color: var(--info); margin-bottom: 1rem"
+            ></i>
+            <h3 class="card-title">Sports Teams</h3>
+            <p class="card-body">
+              Join different sports teams and compete at various levels to
+              showcase your athletic prowess.
+            </p>
+            <a href="sports_teams.html" class="btn">View Teams</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="grid">
+          <div class="card stagger-item animate-fade-in">
+            <span
+              class="badge"
+              style="
+                position: absolute;
+                top: 4px;
+                right: 20px;
+                background: var(--primary);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+              "
+              >Coming Soon</span
+            >
+            <i
+              class="fas fa-code card-icon"
+              style="font-size: 2rem; color: var(--purple); margin-bottom: 1rem"
+            ></i>
+            <h3 class="card-title">Hackathons</h3>
+            <p class="card-body">
+              Explore upcoming hackathons and coding competitions to test your
+              skills.
+            </p>
+            <a href="hackathons.html" class="btn btn-secondary">Explore</a>
+          </div>
+
+          <div class="card stagger-item animate-fade-in">
+            <span
+              class="badge"
+              style="
+                position: absolute;
+                top: 4px;
+                right: 20px;
+                background: var(--success);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+              "
+              >Active</span
+            >
+            <i
+              class="fas fa-calendar-alt card-icon"
+              style="
+                font-size: 2rem;
+                color: var(--warning);
+                margin-bottom: 1rem;
+              "
+            ></i>
+            <h3 class="card-title">Events</h3>
+            <p class="card-body">
+              Check out cultural, technical, and other exciting events happening
+              around campus.
+            </p>
+            <a href="events.html" class="btn btn-secondary">See More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title">ClubSphere</h3>
+            <p>
+              The ultimate platform for club management and discovery at your
+              university.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/pragyaaa__16/" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://linkedin.com/in/pragya-dwivedi-bb572428a" class="social-icon" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="tech_clubs.html">Tech Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="cultural_clubs.html">Cultural Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="sports_teams.html">Sports Teams</a>
+              </li>
+              <li class="footer-link"><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="mailto:info@clubsphere.com"
+                  ><i class="far fa-envelope"></i> info@clubsphere.com</a
+                >
+              </li>
+              <li class="footer-link">
+                <a href="tel:+918423790811"
+                  ><i class="fas fa-phone-alt"></i> 8423790811</a
+                >
+              </li>
+              <li class="footer-link">
+                <a href="tel:+91 8423790811">+8423790811</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Newsletter</h3>
+            <p>
+              Subscribe to stay updated with the latest events and club
+              activities
+            </p>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="newsletter-input"
+              />
+              <br><br>
+              <button class="btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ClubSphere. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navbarMenu.classList.toggle("active");
+      });
+
+      // Animate elements on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add animation classes to cards when they appear in viewport
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fade-in");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        // Observe all cards
+        document.querySelectorAll(".card").forEach((card) => {
+          observer.observe(card);
+        });
+      });
+
+      // Search functionality
+      const searchInput = document.querySelector(".search-input");
+      if (searchInput) {
+        searchInput.addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            // You can implement actual search functionality here
+            alert("Search feature coming soon!");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

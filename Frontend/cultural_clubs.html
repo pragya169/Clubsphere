@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultural Clubs - ClubSphere</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Page-specific styles */
+      .hero-cultural {
+        background: linear-gradient(135deg, #e91e63, #9c27b0);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-cultural::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M30 30 L70 30 L70 70 L30 70 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M50 10 L50 90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M10 50 L90 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+        opacity: 0.3;
+      }
+
+      .filter-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 2rem;
+        justify-content: center;
+      }
+
+      .filter-tag {
+        background-color: var(--light);
+        border: 2px solid #e91e63;
+        color: #e91e63;
+        border-radius: 50px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .filter-tag:hover,
+      .filter-tag.active {
+        background-color: #e91e63;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .club-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .club-card .card-body {
+        flex: 1;
+      }
+
+      .cultural-tag {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background: rgba(233, 30, 99, 0.1);
+        color: #e91e63;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <a href="index.html" class="navbar-logo">
+          <i class="fas fa-globe-americas"></i> ClubSphere
+        </a>
+
+        <div class="menu-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tech_clubs.html" class="navbar-link">Tech</a>
+          </li>
+          <li class="navbar-item">
+            <a href="cultural_clubs.html" class="navbar-link">Cultural</a>
+          </li>
+          <li class="navbar-item">
+            <a href="sports_teams.html" class="navbar-link">Sports</a>
+          </li>
+          <li class="navbar-item">
+            <a href="events.html" class="navbar-link">Events</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero hero-cultural">
+      <div class="container hero-content">
+        <h1 class="hero-title animate-fade-in">Cultural Clubs</h1>
+        <p class="hero-subtitle animate-fade-in">
+          Explore and join creative communities that celebrate art, music,
+          dance, and more
+        </p>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="clubSearch"
+          placeholder="Search cultural clubs..."
+          class="search-input"
+          aria-label="Search cultural clubs"
+        />
+        <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+      </div>
+
+      <div class="filter-tags">
+        <button class="filter-tag active" data-filter="all">All Clubs</button>
+        <button class="filter-tag" data-filter="music">Music</button>
+        <button class="filter-tag" data-filter="dance">Dance</button>
+        <button class="filter-tag" data-filter="art">Art</button>
+        <button class="filter-tag" data-filter="drama">Drama</button>
+        <button class="filter-tag" data-filter="media">Media</button>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Cultural Communities</h2>
+        <div class="grid" id="clubsGrid">
+          <!-- First row of clubs -->
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="music"
+          >
+            <span class="cultural-tag">MUSIC</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3 class="card-title">VERVE</h3>
+            <p class="card-body">
+              "Verve" refers to a lively, energetic, and spirited quality in
+              music and performance.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="music"
+          >
+            <span class="cultural-tag">MUSIC</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-guitar"></i>
+            </div>
+            <h3 class="card-title">ADVAITA</h3>
+            <p class="card-body">
+              The musical society of Bennett University with regular
+              performances and workshops.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="media"
+          >
+            <span class="cultural-tag">MEDIA</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-photo-film"></i>
+            </div>
+            <h3 class="card-title">ISAC</h3>
+            <p class="card-body">
+              The Media Club of Bennett University focused on photography,
+              videography, and design.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="drama"
+          >
+            <span class="cultural-tag">DRAMA</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-theater-masks"></i>
+            </div>
+            <h3 class="card-title">ANSH</h3>
+            <p class="card-body">
+              The dramatics club of Bennett University staging regular
+              performances and plays.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <!-- More clubs continue in a similar pattern -->
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="dance"
+          >
+            <span class="cultural-tag">DANCE</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-drum"></i>
+            </div>
+            <h3 class="card-title">RIVAAZ</h3>
+            <p class="card-body">
+              Nritya or Dance is where one surrenders to music and expresses
+              through movement.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="gaming"
+          >
+            <span class="cultural-tag">GAMING</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3 class="card-title">BU GAMERS</h3>
+            <p class="card-body">
+              A platform for gaming enthusiasts to connect, compete, and
+              celebrate gaming culture.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="art"
+          >
+            <span class="cultural-tag">ART</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="card-title">SILHOUETTE</h3>
+            <p class="card-body">
+              The art club at Bennett University focused on various visual arts
+              and creative expression.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <div
+            class="card club-card animate-fade-in stagger-item"
+            data-category="science"
+          >
+            <span class="cultural-tag">SCIENCE</span>
+            <div style="font-size: 2rem; color: #e91e63; margin-bottom: 1rem">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="card-title">ASTRONOMY</h3>
+            <p class="card-body">
+              A club for space and astronomy lovers with stargazing events and
+              cosmic discussions.
+            </p>
+            <a href="#" class="btn btn-secondary">Know More</a>
+          </div>
+
+          <!-- Add more cards as needed following this pattern -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title">ClubSphere</h3>
+            <p>
+              The ultimate platform for club management and discovery at your
+              university.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="tech_clubs.html">Tech Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="cultural_clubs.html">Cultural Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="sports_teams.html">Sports Teams</a>
+              </li>
+              <li class="footer-link"><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="mailto:info@clubsphere.com">info@clubsphere.com</a>
+              </li>
+              <li class="footer-link">
+                <a href="tel:+91 8423790811">+91 8423790811</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ClubSphere. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navbarMenu.classList.toggle("active");
+      });
+
+      // Filter functionality
+      const filterTags = document.querySelectorAll(".filter-tag");
+      filterTags.forEach((tag) => {
+        tag.addEventListener("click", function () {
+          // Remove active class from all tags
+          filterTags.forEach((t) => t.classList.remove("active"));
+          // Add active class to clicked tag
+          this.classList.add("active");
+
+          const filter = this.dataset.filter;
+
+          // Filter the clubs
+          const clubs = document.querySelectorAll(".club-card");
+          clubs.forEach((club) => {
+            if (filter === "all" || club.dataset.category === filter) {
+              club.style.display = "flex";
+            } else {
+              club.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Search functionality
+      const searchInput = document.getElementById("clubSearch");
+      if (searchInput) {
+        searchInput.addEventListener("keyup", function (e) {
+          const searchTerm = this.value.toLowerCase();
+          const clubs = document.querySelectorAll(".club-card");
+
+          clubs.forEach((club) => {
+            const title = club
+              .querySelector(".card-title")
+              .textContent.toLowerCase();
+            const description = club
+              .querySelector(".card-body")
+              .textContent.toLowerCase();
+
+            if (
+              title.includes(searchTerm) ||
+              description.includes(searchTerm)
+            ) {
+              club.style.display = "flex";
+            } else {
+              club.style.display = "none";
+            }
+          });
+        });
+      }
+
+      // Animation on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fade-in");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        document.querySelectorAll(".card").forEach((card) => {
+          observer.observe(card);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubSphere - Manage Your Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClubSphere - Manage Your Club Easily</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search clubs...">
+            <button class="add-club">+ Add Club</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="clubs">
+            <div class="club-card">
+                <h2>Tech Club</h2>
+                <p>Explore the latest in technology and innovation.</p>
+                <button>View</button>
+            </div>
+            <div class="club-card">
+                <h2>Music Club</h2>
+                <p>Join fellow musicians and explore melodies together.</p>
+                <button>View</button>
+            </div>
+            <div class="club-card">
+                <h2>Sports Club</h2>
+                <p>Engage in various sports and stay fit.</p>
+                <button>View</button>
+            </div>
+        </section>
+        
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-card">
+                <h3>Hackathon 2025</h3>
+                <p>A 24-hour coding competition.</p>
+                <button>Register</button>
+            </div>
+            <div class="event-card">
+                <h3>Battle of Bands</h3>
+                <p>Showcase your music talent and win exciting prizes.</p>
+                <button>Join</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+    }
+    .search-bar {
+        margin-top: 10px;
+    }
+    .search-bar input {
+        padding: 10px;
+        width: 200px;
+    }
+    .add-club {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+    .clubs, .events {
+        margin: 20px auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .club-card, .event-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        width: 250px;
+    }
+    button {
+        margin-top: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+</style>

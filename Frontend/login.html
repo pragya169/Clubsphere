@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ClubSphere</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .auth-container {
+        max-width: 450px;
+        margin: 2rem auto 4rem;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .auth-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary);
+      }
+
+      .auth-btn {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .auth-btn:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .auth-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .auth-links a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .auth-links a:hover {
+        text-decoration: underline;
+      }
+
+      .auth-divider {
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0;
+      }
+
+      .auth-divider::before,
+      .auth-divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .auth-divider span {
+        padding: 0 10px;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      .social-login {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .social-btn:hover {
+        background-color: #f8f8f8;
+      }
+
+      .social-btn i {
+        margin-right: 10px;
+      }
+
+      .google-btn i {
+        color: #db4437;
+      }
+
+      .facebook-btn i {
+        color: #4267b2;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <a href="index.html" class="navbar-logo">
+          <i class="fas fa-globe-americas"></i> ClubSphere
+        </a>
+
+        <div class="menu-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tech_clubs.html" class="navbar-link">Tech</a>
+          </li>
+          <li class="navbar-item">
+            <a href="cultural_clubs.html" class="navbar-link">Cultural</a>
+          </li>
+          <li class="navbar-item">
+            <a href="sports_teams.html" class="navbar-link">Sports</a>
+          </li>
+          <li class="navbar-item">
+            <a href="events.html" class="navbar-link">Events</a>
+          </li>
+          <li class="navbar-item">
+            <a href="login.html" class="btn btn-sm btn-outline">Login</a>
+          </li>
+          <li class="navbar-item">
+            <a href="signup.html" class="btn btn-sm">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="auth-container animate-fade-in">
+        <h2 class="auth-title">Login to ClubSphere</h2>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-input"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="auth-btn">Login</button>
+
+          <div class="auth-links">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <a href="signup.html">Don't have an account? Sign Up</a>
+          </div>
+        </form>
+
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <div class="social-login">
+          <button class="social-btn google-btn">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button class="social-btn facebook-btn">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title">ClubSphere</h3>
+            <p>
+              The ultimate platform for club management and discovery at your
+              university.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="tech_clubs.html">Tech Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="cultural_clubs.html">Cultural Clubs</a>
+              </li>
+              <li class="footer-link">
+                <a href="sports_teams.html">Sports Teams</a>
+              </li>
+              <li class="footer-link"><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="mailto:info@clubsphere.com">info@clubsphere.com</a>
+              </li>
+              <li class="footer-link">
+                <a href="tel:+1234567890">+123 456 7890</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 ClubSphere. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navbarMenu.classList.toggle("active");
+      });
+
+      // Login form submission
+      const loginForm = document.getElementById("login-form");
+      if (loginForm) {
+        loginForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Store basic user info in localStorage
+          const userData = {
+            email: email,
+          };
+          localStorage.setItem("user", JSON.stringify(userData));
+
+          // API endpoint URL
+          const apiUrl = "http://localhost:3001/api/auth/login";
+
+          // Create request data
+          const loginData = {
+            email: email,
+            password: password,
+          };
+
+          console.log("Sending login data:", loginData);
+
+          try {
+            // Send login request asynchronously
+            fetch(apiUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(loginData),
+              credentials: "include",
+            })
+              .then((response) => {
+                console.log("Login response status:", response.status);
+                if (response.ok) {
+                  response
+                    .json()
+                    .then((data) => {
+                      console.log(
+                        "Login successful, updating stored user data"
+                      );
+                      // Update stored user data with complete profile from server
+                      if (data && data.user) {
+                        localStorage.setItem("user", JSON.stringify(data.user));
+                      }
+                    })
+                    .catch((err) => {
+                      console.error("Error parsing login response:", err);
+                    });
+                }
+              })
+              .catch((error) => {
+                console.error("Background login request error:", error);
+              });
+
+            // Redirect immediately to index.html without waiting for response
+            console.log("Redirecting to index.html...");
+            window.location.href = "index.html";
+          } catch (error) {
+            console.error("Error in login process:", error);
+            // Still redirect even if there's an error
+            window.location.href = "index.html";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

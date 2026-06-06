@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Clubs - ClubSphere</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Page-specific styles */
+        .hero-tech {
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-tech::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M30 30 L70 30 L70 70 L30 70 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M50 10 L50 90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><path d="M10 50 L90 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        
+        .filter-tag {
+            background-color: var(--light);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-tag:hover, .filter-tag.active {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .club-stats {
+            background: var(--light);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 1rem;
+            border-radius: var(--card-radius);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .club-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .club-card .card-body {
+            flex: 1;
+        }
+        
+        .club-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-globe-americas"></i> ClubSphere
+            </a>
+            
+            <div class="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="tech_clubs.html" class="navbar-link">Tech</a></li>
+                <li class="navbar-item"><a href="cultural_clubs.html" class="navbar-link">Cultural</a></li>
+                <li class="navbar-item"><a href="sports_teams.html" class="navbar-link">Sports</a></li>
+                <li class="navbar-item"><a href="events.html" class="navbar-link">Events</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero hero-tech">
+        <div class="container hero-content">
+            <h1 class="hero-title animate-fade-in">Tech Clubs</h1>
+            <p class="hero-subtitle animate-fade-in">Discover and join the best technology clubs at your university</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="clubSearch" placeholder="Search tech clubs..." class="search-input" aria-label="Search tech clubs">
+            <button class="search-btn">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        
+        <div class="club-stats animate-fade-in">
+            <div class="stat-item">
+                <div class="stat-number" id="totalClubs">24</div>
+                <div class="stat-label">Clubs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Events</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</</div>
+                <div class="stat-label">Projects</div>
+            </div>
+        </div>
+        
+        <div class="filter-tags">
+            <button class="filter-tag active" data-filter="all">All Clubs</button>
+            <button class="filter-tag" data-filter="ai">AI & ML</button>
+            <button class="filter-tag" data-filter="web">Web Development</button>
+            <button class="filter-tag" data-filter="cloud">Cloud Computing</button>
+            <button class="filter-tag" data-filter="cyber">Cybersecurity</button>
+            <button class="filter-tag" data-filter="coding">Coding</button>
+        </div>
+
+        <div class="grid" id="clubsGrid" style="justify-content: center;">
+            <!-- Clubs will be dynamically loaded here -->
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">ClubSphere</h3>
+                    <p>The ultimate platform for club management and discovery at your university.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="tech_clubs.html">Tech Clubs</a></li>
+                        <li class="footer-link"><a href="cultural_clubs.html">Cultural Clubs</a></li>
+                        <li class="footer-link"><a href="sports_teams.html">Sports Teams</a></li>
+                        <li class="footer-link"><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@clubsphere.com">info@clubsphere.com</a></li>
+                        <li class="footer-link"><a href="tel:8423790811">8423790811</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClubSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Club data with tags and icons
+        const clubs = [
+            { name: "DSS", description: "Data Science Society - Learn and explore data science and AI.", tag: "ai", icon: "fa-brain" },
+            {
+              name: "GDG",
+              description: "Google Developer Group - Learn Google technologies and development.",
+              tag: "web",
+              icon: "", // No icon, using custom HTML for <>,
+            },
+            { name: "BC3", description: "Bennett Cloud Computing Club - Explore cloud technology and solutions.", tag: "cloud", icon: "fa-cloud" },
+            { name: "AR/VR Club", description: "Dive into augmented and virtual reality innovations.", tag: "ai", icon: "fa-vr-cardboard" },
+            { name: "Alan Turing Club", description: "Explore machine learning, AI, and computational thinking.", tag: "ai", icon: "fa-robot" },
+            { name: "Fullstack Club", description: "Master frontend and backend development with projects.", tag: "web", icon: "fa-laptop-code" },
+            { name: "GFG", description: "Geeks for Geeks - Enhance your coding skills and DSA knowledge.", tag: "coding", icon: "fa-code" },
+            { name: "IBF", description: "Indian Blockchain Fraternity - Learn about blockchain technology.", tag: "coding", icon: "fa-link" },
+            { name: "CSI", description: "Computer Society of India - Enhance IT skills and networking.", tag: "coding", icon: "fa-laptop" },
+            { name: "IEEE", description: "Join a global network of technology enthusiasts and innovators.", tag: "coding", icon: "fa-globe" },
+            { name: "ACM", description: "Advance computing knowledge through research and practice.", tag: "coding", icon: "fa-desktop" },
+            { name: "WIEE", description: "Women in Engineering - Empowering women in STEM.", tag: "coding", icon: "fa-users" },
+            { name: "CodeChef", description: "Competitive coding club for algorithm enthusiasts.", tag: "coding", icon: "fa-code-branch" },
+            { name: "AIS", description: "Artificial Intelligence Society - Advancing AI and deep learning.", tag: "ai", icon: "fa-microchip" },
+            { name: "Ciphers", description: "Cybersecurity and cryptography enthusiasts.", tag: "cyber", icon: "fa-shield-alt" },
+            { name: "DroneSoc", description: "Drone Society - Innovate with drone technology.", tag: "coding", icon: "fa-drone" },
+            { name: "Solace", description: "Cloud-based solutions and enterprise computing.", tag: "cloud", icon: "fa-server" },
+            { name: "RPA", description: "Robotic Process Automation - Automate workflows and processes.", tag: "ai", icon: "fa-cogs" },
+            { name: "Quantum Computing Club", description: "Exploring the future of quantum computing.", tag: "coding", icon: "fa-atom" },
+            { name: "Mobilon", description: "Mobile app development and innovation.", tag: "web", icon: "fa-mobile-alt" },
+            { name: "DevOps", description: "Bridging the gap between development and operations.", tag: "cloud", icon: "fa-infinity" },
+            { name: "Technotics", description: "Exploring cutting-edge tech and automation.", tag: "coding", icon: "fa-rocket" },
+            { name: "PDT", description: "Product Development - From ideas to market.", tag: "coding", icon: "fa-lightbulb" },
+            { name: "FOSS", description: "Free and Open Source Software enthusiasts.", tag: "coding", icon: "fa-unlock" }
+        ];
+
+        // Render clubs function
+        function renderClubs(filteredClubs = clubs) {
+            const clubsGrid = document.getElementById('clubsGrid');
+            clubsGrid.innerHTML = '';
+            
+            // Update total count
+            document.getElementById('totalClubs').textContent = filteredClubs.length;
+            
+            if (filteredClubs.length === 0) {
+                clubsGrid.innerHTML = `
+                    <div class="text-center" style="grid-column: 1/-1; padding: 2rem;">
+                        <i class="fas fa-search" style="font-size: 3rem; color: var(--gray); margin-bottom: 1rem;"></i>
+                        <h3>No clubs found</h3>
+                        <p>Try changing your search terms or filters</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredClubs.forEach((club, index) => {
+                let iconHTML = `<i class="fas ${club.icon}"></i>`;
+                if (club.name === "GDG") {
+                    iconHTML = `<span style="font-size: 2rem; font-weight: bold; color: var(--primary);"><></span>`;
+                }
+                let detailsLink = "#";
+                if (club.name === "DSS") {
+                  detailsLink = "dss_club.html"; // Ensure the link points to the correct file
+                }
+                const clubCard = document.createElement('div');
+                clubCard.className = 'card club-card animate-fade-in stagger-item';
+                clubCard.style.animationDelay = `${index * 0.05}s`;
+                
+                clubCard.innerHTML = `
+                    <span class="club-tag">${club.tag.toUpperCase()}</span>
+                    <div style="margin-bottom: 1rem;">${iconHTML}</div>
+                    <h3 class="card-title">${club.name}</h3>
+                    <p class="card-body">${club.description}</p>
+                    <a href="${detailsLink}" class="btn">View Details</a>
+                `;
+                
+                clubsGrid.appendChild(clubCard);
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderClubs();
+            
+            // Filter functionality
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // Remove active class from all tags
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tag
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    const searchTerm = document.getElementById('clubSearch').value.toLowerCase();
+                    
+                    filterClubs(searchTerm, filter);
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('clubSearch');
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = this.value.toLowerCase();
+                const activeFilter = document.querySelector('.filter-tag.active').dataset.filter;
+                
+                filterClubs(searchTerm, activeFilter);
+            });
+            
+            // Search button click
+            const searchBtn = document.querySelector('.search-btn');
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = document.getElementById('clubSearch').value.toLowerCase();
+                const activeFilter = document.querySelector('.filter-tag.active').dataset.filter;
+                
+                filterClubs(searchTerm, activeFilter);
+            });
+        });
+        
+        // Filter clubs
+        function filterClubs(searchTerm, filter) {
+            let filteredClubs = clubs;
+            
+            // Filter by tag
+            if (filter !== 'all') {
+                filteredClubs = filteredClubs.filter(club => club.tag === filter);
+            }
+            
+            // Filter by search term
+            if (searchTerm) {
+                filteredClubs = filteredClubs.filter(club => 
+                    club.name.toLowerCase().includes(searchTerm) || 
+                    club.description.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            renderClubs(filteredClubs);
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
